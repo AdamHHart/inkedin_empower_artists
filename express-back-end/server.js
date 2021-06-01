@@ -4,11 +4,15 @@ const BodyParser = require("body-parser");
 // const PORT = 8080;
 const PORT = 3003;
 const db = require("./lib/db");
+const path = require("path");
 
 // Express Configuration
 App.use(BodyParser.urlencoded({ extended: false }));
 App.use(BodyParser.json());
 App.use(Express.static("public"));
+
+// Serve static files from the React frontend app
+app.use(express.static(path.join(__dirname, "../react-front-end/build")));
 
 App.get("/api/search", (req, res) => {
   const searchItem = req.query.query;
@@ -337,6 +341,11 @@ App.put("/api/messages", (req, res) => {
         messages: response.rows,
       });
     });
+});
+
+// AFTER defining routes: Anything that doesn't match what's above, send back index.html; (the beginning slash ('/') in the string is important!)
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname + "/../react-front-end/build/index.html"));
 });
 
 App.listen(PORT, () => {

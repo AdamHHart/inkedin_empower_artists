@@ -1,0 +1,29 @@
+{
+  "name": "express-back-end",
+  "version": "1.0.0",
+  "description": "Boilerplate for the Express backend in an Express-React project",
+  "main": "server.js",
+  "author": "garrettgsb",
+  "license": "MIT",
+  "scripts": {
+    "go": "nodemon server.js",
+    "db:reset": "node bin/resetdb.js",
+    "frontend": "cd react-front-end && npm start",
+    "api": "cd express-back-end && nodemon server.js",
+    "dev": "concurrently --kill-others-on-fail \"npm run api\" \"npm run frontend\"",
+    "heroku-postbuild": "cd frontend && npm install && npm run build"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "chalk": "^2.4.2",
+    "dotenv": "^2.0.0",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.7",
+    "pg": "^8.5.1",
+    "pg-native": "^3.0.0",
+    "postgres": "^1.0.2"
+  }
+
+}
+
+
