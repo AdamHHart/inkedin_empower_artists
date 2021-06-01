@@ -23,6 +23,8 @@ import SearchResults from "./component/SearchResults";
 import axios from "axios";
 
 import ErrorPage from "./component/404";
+import ReactDOM from "react-dom";
+import { Auth0Provider } from "@auth0/auth0-react";
 
 export const JobsContext = createContext([]);
 
@@ -44,7 +46,14 @@ export default function App() {
   };
 
   return (
-    <div className="App">
+    // // Incomplete, but configured user authentication using google or github
+    // ReactDOM.render(
+    // <Auth0Provider
+    //   domain="dev-uqt0uea4.us.auth0.com"
+    //   clientId="ScUHsGI06gi2HvvBOE4FH6VKnpi2owtd"
+    //   redirectUri={window.location.origin}
+    // >
+    <div className="App" id="root">
       <Router>
         <PrimarySearchAppBar
           onLogin={setActiveUser}
@@ -86,5 +95,7 @@ export default function App() {
         </Switch>
       </Router>
     </div>
+    // </Auth0Provider>,
+    // document.getElementById("root")
   );
 }

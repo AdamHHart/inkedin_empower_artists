@@ -21,6 +21,9 @@ export default function Login(props) {
       >
         <button>Login</button>
       </Link>
+      <h4 style={{ textDecoration: "none", color: "#B9A1BE" }}>
+        Login by submitting a number between 1 and 12
+      </h4>
     </form>
   );
 }

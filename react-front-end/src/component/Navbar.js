@@ -18,6 +18,7 @@ import MoreIcon from "@material-ui/icons/MoreVert";
 import SearchBar from "./SearchBar";
 
 import { useStyles } from "./Component_Style/Navbar.jsx";
+// import LoginButton from "./AuthRedirect";
 
 export default function PrimarySearchAppBar(props) {
   const classes = useStyles();
@@ -137,6 +138,7 @@ export default function PrimarySearchAppBar(props) {
               <div>
                 <SearchBar filteredSearch={props.filteredSearch} />
               </div>
+              <div>{/* <LoginButton></LoginButton> */}</div>
             </div>
             <div className={classes.nav_buttons_container}>
               <div className={classes.sectionDesktop}>
@@ -236,6 +238,7 @@ export default function PrimarySearchAppBar(props) {
             </div>
           </Toolbar>
         </AppBar>
+
         {renderMobileMenu}
         {renderMenu}
       </div>
