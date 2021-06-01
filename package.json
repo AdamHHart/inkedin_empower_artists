@@ -4,6 +4,7 @@
   "engines": {
     "node": "15.x"
   },
+  "homepage" : "http://AdamHHart.github.io/inkedin",
   "description": "Boilerplate for the Express backend in an Express-React project",
   "main": "server.js",
   "author": "garrettgsb",
