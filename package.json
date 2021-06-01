@@ -1,6 +1,9 @@
 {
   "name": "express-back-end",
   "version": "1.0.0",
+  "engines": {
+    "node": "15.x"
+  },
   "description": "Boilerplate for the Express backend in an Express-React project",
   "main": "server.js",
   "author": "garrettgsb",
@@ -14,7 +17,7 @@
     "heroku-postbuild": "cd frontend && npm install && npm run build"
   },
   "dependencies": {
-    "body-parser": "^1.18.3",
+
     "chalk": "^2.4.2",
     "dotenv": "^2.0.0",
     "express": "^4.16.4",
