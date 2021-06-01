@@ -17,16 +17,13 @@
     "heroku-postbuild": "cd react-front-end && npm install && npm run build"
   },
   "dependencies": {
-
     "chalk": "^2.4.2",
     "dotenv": "^2.0.0",
     "express": "^4.16.4",
     "nodemon": "^1.18.7",
     "pg": "^8.5.1",
     "pg-native": "^3.0.0",
-    "postgres": "^1.0.2"
+    "postgres": "^1.0.2",
+    "shave": "^2.5.10"
   }
-
 }
-
-
