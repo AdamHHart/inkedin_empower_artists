@@ -348,6 +348,10 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname + "/../react-front-end/build/index.html"));
 });
 
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8000;
+}
 App.listen(PORT, () => {
   // eslint-disable-next-line no-console
   console.log(
