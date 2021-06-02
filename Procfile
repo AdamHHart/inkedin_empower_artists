@@ -1,2 +1,2 @@
 
-web: node express-back-end/server.js
+web: node react-front-end/index.js
